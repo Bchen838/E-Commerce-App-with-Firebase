@@ -45,6 +45,8 @@ The app allows users to browse products, manage a shopping cart, and place order
 
 ## How to Run the Project
 
+You'll have to add your own FireBase config details for this to function. 
+
 1. Clone the repository: git clone https://github.com/Bchen838/E-Commerce-App-with-Firebase/tree/main
 2. Navigate into the project: cd e-commerce
 3. Install dependencies: npm install
