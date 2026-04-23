@@ -1,73 +1,52 @@
-# React + TypeScript + Vite
+# Firebase E-Commerce Web App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
+This is a full-stack e-commerce web application built with React, TypeScript, Redux Toolkit, and Firebase.
 
-Currently, two official plugins are available:
+The app allows users to browse products, manage a shopping cart, and place orders. Firebase is used for authentication and database management.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Authentication
+- User registration with email/password
+- Login and logout functionality
+- User data stored in Firestore
 
-## Expanding the ESLint configuration
+### Product Management
+- Products stored in Firestore
+- Create, update, and delete products
+- Products displayed on the home page
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Shopping Cart
+- Add/remove items from cart
+- Cart state managed using Redux Toolkit
+- Cart persists using sessionStorage
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Orders
+- Checkout creates an order in Firestore
+- Orders linked to authenticated user
+- Order history page displays past orders
+- Each order shows detailed items, quantities, and pricing
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Tech Stack
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- React
+- TypeScript
+- Redux Toolkit
+- Firebase Authentication
+- Firebase Firestore
+- Vite
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## How to Run the Project
+
+1. Clone the repository: git clone https://github.com/Bchen838/E-Commerce-App-with-Firebase/tree/main
+2. Navigate into the project: cd e-commerce
+3. Install dependencies: npm install
+4. Start the development server: npm run dev
+
