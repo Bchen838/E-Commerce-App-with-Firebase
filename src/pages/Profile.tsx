@@ -90,7 +90,14 @@ const Profile = () => {
         <div>
             <h2>User Profile</h2>
 
-            {profile && <p>Email: {profile.email}</p>}
+            {profile && (
+                <div>
+                    <h3>Current Profile Info</h3>
+                    <p><strong>Email:</strong> {profile.email}</p>
+                    <p><strong>Name:</strong> {profile.name || "Not set"}</p>
+                    <p><strong>Address:</strong> {profile.address || "Not set"}</p>
+                </div>
+            )}
 
             <form onSubmit={handleUpdate}>
                 <input
