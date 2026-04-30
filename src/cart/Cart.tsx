@@ -63,8 +63,8 @@ const Cart = () => {
           ))}
 
           <hr />
-          <p><strong>Total Products:</strong> {totalQuantity}</p>
-          <p><strong>Total Price:</strong> ${totalPrice.toFixed(2)}</p>
+          <p>Total Products: {totalQuantity}</p>
+          <p>Total Price: ${totalPrice.toFixed(2)}</p>
           <button onClick={handleCheckout}>Checkout</button>
         </>
       )}
