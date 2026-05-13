@@ -9,6 +9,26 @@ View on Vercel: (https://e-commerce-app-with-firebase.vercel.app/)
 
 ---
 
+## Tech Stack
+
+### Frontend
+- React
+- TypeScript
+- Redux Toolkit
+- React Query
+
+### Backend & Database
+- Firebase Authentication
+- Firestore
+
+### Testing
+- Jest
+- React Testing Library
+
+### DevOps & Deployment
+- GitHub Actions
+- Vercel
+
 ## Features
 
 ### Authentication
